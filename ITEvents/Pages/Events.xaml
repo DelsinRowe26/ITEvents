@@ -1,0 +1,71 @@
+﻿<Page x:Class="ITEvents.Pages.Events"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ITEvents.Pages" xmlns:sys="clr-namespace:System;assembly=mscorlib"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Events" Background="White">
+
+    <Page.Resources>
+        <sys:String x:Key="defaultImage">
+            pack://application:,,,/Resources/logo.png
+        </sys:String>
+    </Page.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="220"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="80*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="56"/>
+            <RowDefinition />
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+
+        <ComboBox x:Name="cmbFilterEvent" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="5 0 5 0" SelectedIndex="0" ItemsSource="{Binding FilterList}" SelectionChanged="cmbFilterEvent_SelectionChanged"/>
+        <DatePicker x:Name="dpFilterDate" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Margin="5 0 5 0" DisplayDate="2023-03-25" SelectedDateChanged="dpFilterDate_SelectedDateChanged"/>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock x:Name="tblResultAmount"/>
+            <TextBlock Text="из"/>
+            <TextBlock x:Name="tblAllAmount"/>
+        </StackPanel>
+
+        <ListView x:Name="lvEvents" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="2" Margin="5 5 5 5" d:ItemsSource="{d:SampleData ItemCount=1}" SelectionChanged="lvEvents_SelectionChanged">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="Black" BorderThickness="1" Background="{Binding Background}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="200"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="100"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Image x:Name="imgLogoEv" Width="180" Height="100" Margin="5" Source="{Binding ImgPathJpg, FallbackValue={StaticResource defaultImage}}"/>
+
+                            <StackPanel Grid.Column="1" Margin="5">
+                                <TextBlock Text="{Binding Events1}" FontWeight="Bold"/>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding DATE}"/>
+                                    <TextBlock Text="{Binding DAYS}"/>
+                                </StackPanel>
+                                <TextBlock Text="{Binding City.CITY1}"/>
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>
