@@ -38,5 +38,14 @@ namespace ITEvents.Entities
         public virtual Direction Direction1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Events> Events { get; set; }
-    }
+
+		public string ImgPathOrgJpg
+		{
+			get
+			{
+				var path = "pack://application:,,,/Resources/Organizer/" + this.Photo + ".jpg";
+				return path;
+			}
+		}
+	}
 }

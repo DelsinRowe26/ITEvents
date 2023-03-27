@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ITEvents.Windows"
         mc:Ignorable="d"
-        Title="OrganizerWin" Height="450" Width="800">
+        Title="OrganizerWin" Height="450" Width="800" Icon="/icon.ico" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="#FF99FFFF">
+            <TextBlock Text="Окно организатора" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <!--<Button x:Name="btnEnter" HorizontalAlignment="Left" Content="Войти" Click="btnEnter_Click"/>-->
+                
+                <Button x:Name="btnBack" HorizontalAlignment="Right" Content="Назад" Click="btnBack_Click"/>
+            </StackPanel>
+            <Image x:Name="imgLogo" Width="45" Height="45" HorizontalAlignment="Left" Margin="5" Source="/logo.png"/>
+        </Grid>
+        <Frame x:Name="FrmMainOrg" Grid.Row="1" NavigationUIVisibility="Hidden" ContentRendered="FrmMainOrg_ContentRendered" />
     </Grid>
 </Window>

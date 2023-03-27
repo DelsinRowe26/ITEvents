@@ -1,4 +1,7 @@
-﻿using System;
+﻿using ITEvents.Entities;
+using ITEvents.Pages;
+using ITEvents.Windows;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +22,30 @@ namespace ITEvents.Windows
 	/// </summary>
 	public partial class OrganizerWin : Window
 	{
-		public OrganizerWin()
+		public OrganizerWin(Organizer organizer)
 		{
 			InitializeComponent();
+
+			FrmMainOrg.Navigate(new OrgPg(organizer));
+			MainWindow window = new MainWindow();
+			window.Close();
+		}
+
+		private void FrmMainOrg_ContentRendered(object sender, EventArgs e)
+		{
+			if (FrmMainOrg.CanGoBack)
+			{
+				btnBack.Visibility = Visibility.Visible;
+			}
+			else
+			{
+				btnBack.Visibility= Visibility.Hidden;
+			}
+        }
+
+		private void btnBack_Click(object sender, RoutedEventArgs e)
+		{
+			FrmMainOrg.GoBack();
 		}
 	}
 }

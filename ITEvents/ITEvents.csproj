@@ -117,6 +117,12 @@
     <Compile Include="Pages\MoreEvent.xaml.cs">
       <DependentUpon>MoreEvent.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\MyProfilePg.xaml.cs">
+      <DependentUpon>MyProfilePg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrgPg.xaml.cs">
+      <DependentUpon>OrgPg.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\JuryWin.xaml.cs">
       <DependentUpon>JuryWin.xaml</DependentUpon>
     </Compile>
@@ -130,6 +136,14 @@
       <DependentUpon>OrganizerWin.xaml</DependentUpon>
     </Compile>
     <Page Include="Pages\MoreEvent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MyProfilePg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\OrgPg.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -250,6 +264,16 @@
       <DependentUpon>ModelEvent.edmx</DependentUpon>
       <LastGenOutput>ModelEvent.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\Organizer\1.jpg" />
+    <Resource Include="Resources\Organizer\10.jpg" />
+    <Resource Include="Resources\Organizer\2.jpg" />
+    <Resource Include="Resources\Organizer\3.jpg" />
+    <Resource Include="Resources\Organizer\4.jpg" />
+    <Resource Include="Resources\Organizer\5.jpg" />
+    <Resource Include="Resources\Organizer\6.jpg" />
+    <Resource Include="Resources\Organizer\7.jpg" />
+    <Resource Include="Resources\Organizer\8.jpg" />
+    <Resource Include="Resources\Organizer\9.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

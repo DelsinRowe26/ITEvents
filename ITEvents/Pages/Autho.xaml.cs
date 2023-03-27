@@ -69,7 +69,9 @@ namespace ITEvents.Pages
 					else if(organizer != null)
 					{
 						clearForm();
-						OrganizerWin organizerWin = new OrganizerWin();
+						var orgPg = new OrgPg(organizer);
+						//orgPg.DataContext = organizer;
+						OrganizerWin organizerWin = new OrganizerWin(organizer);
 						organizerWin.ShowDialog();
 					}
 					else if(jury != null)
@@ -108,7 +110,7 @@ namespace ITEvents.Pages
 					else if (organizer != null && organizer.Email == login && organizer.Password == password && tbCaptcha.Text == tblCaptcha.Text)
 					{
 						clearForm();
-						OrganizerWin organizerWin = new OrganizerWin();
+						OrganizerWin organizerWin = new OrganizerWin(organizer);
 						organizerWin.ShowDialog();
 					}
 					else if (jury != null && jury.Email == login && jury.Password == password && tbCaptcha.Text == tblCaptcha.Text)
@@ -174,6 +176,14 @@ namespace ITEvents.Pages
 			tblCaptcha.Visibility = Visibility.Hidden;
 			tbCaptcha.Visibility = Visibility.Hidden;
 			tblTimer.Visibility = Visibility.Hidden;
+		}
+
+		private void pbPassword_KeyDown(object sender, KeyEventArgs e)
+		{
+			if(e.Key == Key.Enter)
+			{
+				btnEnter_Click(sender, e);
+			}
 		}
 	}
 }
