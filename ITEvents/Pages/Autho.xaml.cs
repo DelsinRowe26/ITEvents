@@ -37,7 +37,7 @@ namespace ITEvents.Pages
 
 		private void btnEnterGuest_Click(object sender, RoutedEventArgs e)
 		{
-			NavigationService.Navigate(new Events());
+			NavigationService.Navigate(new Events(null));
         }
 
 		private void btnEnter_Click(object sender, RoutedEventArgs e)

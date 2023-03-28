@@ -80,5 +80,33 @@ namespace ITEvents.Pages
 			myProfile.DataContext = organizer1;
 			NavigationService.Navigate(myProfile);
 		}
+
+		private void btnMembersList_Click(object sender, RoutedEventArgs e)
+		{
+
+			List<Members> members1 = EventEntitiesIT.GetContext().Members.ToList();
+
+			var pgList = new pgListJury();
+
+			pgList.lvListJuryMemb.ItemsSource = members1;
+
+			NavigationService.Navigate(pgList);
+        }
+
+		private void btnJuryList_Click(object sender, RoutedEventArgs e)
+		{
+			List<Jury> juries = EventEntitiesIT.GetContext().Jury.ToList();
+
+			var pgList = new pgListJury();
+
+			pgList.lvListJuryMemb.ItemsSource = juries;
+
+			NavigationService.Navigate(pgList);
+		}
+
+		private void btnEvents_Click(object sender, RoutedEventArgs e)
+		{
+			NavigationService.Navigate(new Events(organizer1));
+		}
 	}
 }

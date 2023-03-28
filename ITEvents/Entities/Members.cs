@@ -27,5 +27,14 @@ namespace ITEvents.Entities
         public string Photo { get; set; }
     
         public virtual City City { get; set; }
-    }
+
+		public string ImgPathJpg
+		{
+			get
+			{
+				var path = "pack://application:,,,/Resources/Members/" + this.Photo;
+				return path;
+			}
+		}
+	}
 }

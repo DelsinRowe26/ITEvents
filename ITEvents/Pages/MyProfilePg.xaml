@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="60"/>
+            <RowDefinition Height="40"/>
             <RowDefinition/>
             <RowDefinition Height="15"/>
         </Grid.RowDefinitions>
@@ -35,7 +35,7 @@
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Center">
                     <TextBlock Text="Дата рождения: "/>
-                    <TextBlock Text="{Binding Date_of_birthday}"/>
+                    <TextBlock Text="{Binding Date_of_birthday, StringFormat={}{0:d}}"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Center">
                     <TextBlock Text="Id_Number: "/>
@@ -51,12 +51,33 @@
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Center">
                     <TextBlock Text="Email: "/>
-                    <TextBlock Text="{Binding Email}"/>
+                    <TextBlock x:Name="tblEmail" Text="{Binding Email}"/>
                 </StackPanel>
             </StackPanel>
             <StackPanel Grid.Column="2" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Image x:Name="imgUser" Width="120" Height="120" Margin="15" Source="{Binding ImgPathOrgJpg}" HorizontalAlignment="Center"/>
-                
+                <Image x:Name="imgUser" Width="120" Height="80" Margin="15" Source="{Binding ImgPathOrgJpg}" HorizontalAlignment="Center"/>
+                <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Center">
+                    <CheckBox x:Name="chbChangingThePassword" VerticalAlignment="Center" Checked="chbChangingThePassword_Checked" Unchecked="chbChangingThePassword_Unchecked"/>
+                    <TextBlock Text="Смена пароля"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Right">
+                    <TextBlock Text="Пароль: "/>
+                    <PasswordBox x:Name="pbChangingThePass" Margin="5" Width="150" IsEnabled="False" PasswordChanged="pbChangingThePass_PasswordChanged"/>
+                    <TextBlock x:Name="tblVisiblePass"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Right">
+                    <TextBlock Text="Повтор пароля: "/>
+                    <PasswordBox x:Name="pbChangingThePassRepeat" Margin="5" Width="150" IsEnabled="False" PasswordChanged="pbChangingThePassRepeat_PasswordChanged"/>
+                    <TextBlock x:Name="tblVisibleRep"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Center">
+                    <CheckBox x:Name="chbVisibleThePassword" VerticalAlignment="Center" Checked="chbVisibleThePassword_Checked" Unchecked="chbVisibleThePassword_Unchecked" IsEnabled="False"/>
+                    <TextBlock Text="Видимый пароль"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Center">
+                    <Button x:Name="btnOk" Content="Ок" Margin="5" Click="btnOk_Click" IsEnabled="False"/>
+                    <Button x:Name="btnCancle" Content="Отмена" Margin="5" Click="btnCancle_Click"/>
+                </StackPanel>
             </StackPanel>
         </Grid>
     </Grid>

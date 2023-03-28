@@ -1,0 +1,65 @@
+﻿<Page x:Class="ITEvents.Pages.pgListJury"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ITEvents.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="pgListJury" Background="White">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="220"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="80*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <ListView x:Name="lvListJuryMemb" Grid.Column="0" Grid.ColumnSpan="5" Margin="5 5 5 5" d:ItemsSource="{d:SampleData ItemCount=1}" Grid.Row="1">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="Black" BorderThickness="1" Background="{Binding Background}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="200"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="100"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Image x:Name="imgPhotoUser" Width="180" Height="100" Margin="5" Source="{Binding ImgPathJpg}"/>
+
+                            <StackPanel Grid.Column="1" Margin="5">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Fisrtname}" FontWeight="Bold"/>
+                                    <TextBlock Text="{Binding Secondname}" FontWeight="Bold"/>
+                                    <TextBlock Text="{Binding Patronymic}" FontWeight="Bold"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Date_of_birthday, StringFormat={}{0:d}}"/>
+                                    <TextBlock Text="{Binding Gender}"/>
+                                    <TextBlock Text="{Binding City.CITY1}"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Phone}"/>
+                                    <TextBlock Text="{Binding Email}"/>
+                                </StackPanel>
+                            </StackPanel>
+                            
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>

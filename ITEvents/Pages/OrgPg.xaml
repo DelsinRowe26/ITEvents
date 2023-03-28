@@ -32,9 +32,9 @@
                 <TextBlock x:Name="tblGender"/>
                 <TextBlock x:Name="tblSecondname"/>
             </StackPanel>
-            <Button x:Name="btnEvents" Content="Мероприятия" HorizontalAlignment="Center" Width="260" Height="80" Margin="5"/>
-            <Button x:Name="btnMembersList" Content="Участники" HorizontalAlignment="Center" Width="260" Height="80" Margin="5"/>
-            <Button x:Name="btnJuryList" Content="Жюри" HorizontalAlignment="Center" Width="260" Height="80" Margin="5"/>
+            <Button x:Name="btnEvents" Content="Мероприятия" HorizontalAlignment="Center" Width="260" Height="80" Margin="5" Click="btnEvents_Click"/>
+            <Button x:Name="btnMembersList" Content="Участники" HorizontalAlignment="Center" Width="260" Height="80" Margin="5" Click="btnMembersList_Click"/>
+            <Button x:Name="btnJuryList" Content="Жюри" HorizontalAlignment="Center" Width="260" Height="80" Margin="5" Click="btnJuryList_Click"/>
         </StackPanel>
     </Grid>
 </Page>

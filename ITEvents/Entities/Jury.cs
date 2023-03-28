@@ -30,5 +30,14 @@ namespace ITEvents.Entities
     
         public virtual City City { get; set; }
         public virtual Direction Direction1 { get; set; }
-    }
+
+		public string ImgPathJpg
+		{
+			get
+			{
+				var path = "pack://application:,,,/Resources/Jury/" + this.Photo;
+				return path;
+			}
+		}
+	}
 }

@@ -25,7 +25,7 @@ namespace ITEvents
 		{
 			InitializeComponent();
 
-			FrmMain.Navigate(new Events());
+			FrmMain.Navigate(new Events(null));
 		}
 
 		private void FrmMain_ContentRendered(object sender, EventArgs e)

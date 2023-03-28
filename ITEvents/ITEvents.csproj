@@ -123,6 +123,9 @@
     <Compile Include="Pages\OrgPg.xaml.cs">
       <DependentUpon>OrgPg.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\pgListJury.xaml.cs">
+      <DependentUpon>pgListJury.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\JuryWin.xaml.cs">
       <DependentUpon>JuryWin.xaml</DependentUpon>
     </Compile>
@@ -144,6 +147,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\OrgPg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\pgListJury.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -264,6 +271,106 @@
       <DependentUpon>ModelEvent.edmx</DependentUpon>
       <LastGenOutput>ModelEvent.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\Jury\foto1.jpg" />
+    <Resource Include="Resources\Jury\foto10.jpg" />
+    <Resource Include="Resources\Jury\foto11.jpg" />
+    <Resource Include="Resources\Jury\foto12.jpg" />
+    <Resource Include="Resources\Jury\foto13.jpg" />
+    <Resource Include="Resources\Jury\foto14.jpg" />
+    <Resource Include="Resources\Jury\foto15.jpg" />
+    <Resource Include="Resources\Jury\foto16.jpg" />
+    <Resource Include="Resources\Jury\foto17.jpg" />
+    <Resource Include="Resources\Jury\foto18.jpg" />
+    <Resource Include="Resources\Jury\foto19.jpg" />
+    <Resource Include="Resources\Jury\foto2.jpg" />
+    <Resource Include="Resources\Jury\foto20.jpg" />
+    <Resource Include="Resources\Jury\foto21.jpg" />
+    <Resource Include="Resources\Jury\foto22.jpg" />
+    <Resource Include="Resources\Jury\foto23.jpg" />
+    <Resource Include="Resources\Jury\foto24.jpg" />
+    <Resource Include="Resources\Jury\foto25.jpg" />
+    <Resource Include="Resources\Jury\foto26.jpg" />
+    <Resource Include="Resources\Jury\foto27.jpg" />
+    <Resource Include="Resources\Jury\foto28.jpg" />
+    <Resource Include="Resources\Jury\foto29.jpg" />
+    <Resource Include="Resources\Jury\foto3.jpg" />
+    <Resource Include="Resources\Jury\foto30.jpg" />
+    <Resource Include="Resources\Jury\foto4.jpg" />
+    <Resource Include="Resources\Jury\foto5.jpg" />
+    <Resource Include="Resources\Jury\foto6.jpg" />
+    <Resource Include="Resources\Jury\foto7.jpg" />
+    <Resource Include="Resources\Jury\foto8.jpg" />
+    <Resource Include="Resources\Jury\foto9.jpg" />
+    <Resource Include="Resources\Members\foto1.jpg" />
+    <Resource Include="Resources\Members\foto10.jpg" />
+    <Resource Include="Resources\Members\foto11.jpg" />
+    <Resource Include="Resources\Members\foto12.jpg" />
+    <Resource Include="Resources\Members\foto13.jpg" />
+    <Resource Include="Resources\Members\foto14.jpg" />
+    <Resource Include="Resources\Members\foto15.jpg" />
+    <Resource Include="Resources\Members\foto16.jpg" />
+    <Resource Include="Resources\Members\foto17.jpg" />
+    <Resource Include="Resources\Members\foto18.jpg" />
+    <Resource Include="Resources\Members\foto19.jpg" />
+    <Resource Include="Resources\Members\foto2.jpg" />
+    <Resource Include="Resources\Members\foto20.jpg" />
+    <Resource Include="Resources\Members\foto21.jpg" />
+    <Resource Include="Resources\Members\foto22.jpg" />
+    <Resource Include="Resources\Members\foto23.jpg" />
+    <Resource Include="Resources\Members\foto24.jpg" />
+    <Resource Include="Resources\Members\foto25.jpg" />
+    <Resource Include="Resources\Members\foto26.jpg" />
+    <Resource Include="Resources\Members\foto27.jpg" />
+    <Resource Include="Resources\Members\foto28.jpg" />
+    <Resource Include="Resources\Members\foto29.jpg" />
+    <Resource Include="Resources\Members\foto3.jpg" />
+    <Resource Include="Resources\Members\foto30.jpg" />
+    <Resource Include="Resources\Members\foto31.jpg" />
+    <Resource Include="Resources\Members\foto32.jpg" />
+    <Resource Include="Resources\Members\foto33.jpg" />
+    <Resource Include="Resources\Members\foto34.jpg" />
+    <Resource Include="Resources\Members\foto35.jpg" />
+    <Resource Include="Resources\Members\foto36.jpg" />
+    <Resource Include="Resources\Members\foto37.jpg" />
+    <Resource Include="Resources\Members\foto38.jpg" />
+    <Resource Include="Resources\Members\foto39.jpg" />
+    <Resource Include="Resources\Members\foto4.jpg" />
+    <Resource Include="Resources\Members\foto40.jpg" />
+    <Resource Include="Resources\Members\foto41.jpg" />
+    <Resource Include="Resources\Members\foto42.jpg" />
+    <Resource Include="Resources\Members\foto43.jpg" />
+    <Resource Include="Resources\Members\foto44.jpg" />
+    <Resource Include="Resources\Members\foto45.jpg" />
+    <Resource Include="Resources\Members\foto46.jpg" />
+    <Resource Include="Resources\Members\foto47.jpg" />
+    <Resource Include="Resources\Members\foto48.jpg" />
+    <Resource Include="Resources\Members\foto49.jpg" />
+    <Resource Include="Resources\Members\foto5.jpg" />
+    <Resource Include="Resources\Members\foto50.jpg" />
+    <Resource Include="Resources\Members\foto51.jpg" />
+    <Resource Include="Resources\Members\foto52.jpg" />
+    <Resource Include="Resources\Members\foto53.jpg" />
+    <Resource Include="Resources\Members\foto54.jpg" />
+    <Resource Include="Resources\Members\foto55.jpg" />
+    <Resource Include="Resources\Members\foto56.jpg" />
+    <Resource Include="Resources\Members\foto57.jpg" />
+    <Resource Include="Resources\Members\foto58.jpg" />
+    <Resource Include="Resources\Members\foto59.jpg" />
+    <Resource Include="Resources\Members\foto6.jpg" />
+    <Resource Include="Resources\Members\foto60.jpg" />
+    <Resource Include="Resources\Members\foto61.jpg" />
+    <Resource Include="Resources\Members\foto62.jpg" />
+    <Resource Include="Resources\Members\foto63.jpg" />
+    <Resource Include="Resources\Members\foto64.jpg" />
+    <Resource Include="Resources\Members\foto65.jpg" />
+    <Resource Include="Resources\Members\foto66.jpg" />
+    <Resource Include="Resources\Members\foto67.jpg" />
+    <Resource Include="Resources\Members\foto68.jpg" />
+    <Resource Include="Resources\Members\foto69.jpg" />
+    <Resource Include="Resources\Members\foto7.jpg" />
+    <Resource Include="Resources\Members\foto70.jpg" />
+    <Resource Include="Resources\Members\foto8.jpg" />
+    <Resource Include="Resources\Members\foto9.jpg" />
     <Resource Include="Resources\Organizer\1.jpg" />
     <Resource Include="Resources\Organizer\10.jpg" />
     <Resource Include="Resources\Organizer\2.jpg" />
@@ -275,5 +382,6 @@
     <Resource Include="Resources\Organizer\8.jpg" />
     <Resource Include="Resources\Organizer\9.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

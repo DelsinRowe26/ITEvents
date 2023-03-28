@@ -67,5 +67,6 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <Button x:Name="btnCreatEvent" Content="Создать" Grid.Row="3" Grid.Column="2" Visibility="Hidden"/>
     </Grid>
 </Page>

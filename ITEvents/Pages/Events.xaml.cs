@@ -22,7 +22,7 @@ namespace ITEvents.Pages
 	/// </summary>
 	public partial class Events : Page
 	{
-		public Events()
+		public Events(Organizer organizer)
 		{
 			InitializeComponent();
 
@@ -34,6 +34,10 @@ namespace ITEvents.Pages
 			//cmbFilterEvent.ItemsSource = events;
 
 			UpdateData();
+			if(organizer != null)
+			{
+				btnCreatEvent.Visibility = Visibility.Visible;
+			}
 		}
 
 		public string[] FilterList { get; set; } =
