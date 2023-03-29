@@ -74,6 +74,7 @@
           <Property Name="ID_City" Type="int" />
           <Property Name="Direction" Type="nvarchar" MaxLength="50" />
           <Property Name="ID_Direction" Type="int" />
+          <Property Name="ID_Organizer" Type="int" />
         </EntityType>
         <EntityType Name="Jury">
           <Key>
@@ -216,6 +217,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Events_Organizer1">
+          <End Role="Organizer" Type="Self.Organizer" Multiplicity="0..1" />
+          <End Role="Events" Type="Self.Events" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Organizer">
+              <PropertyRef Name="ID_Organizer" />
+            </Principal>
+            <Dependent Role="Events">
+              <PropertyRef Name="ID_Organizer" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Jury_City">
           <End Role="City" Type="Self.City" Multiplicity="0..1" />
           <End Role="Jury" Type="Self.Jury" Multiplicity="*" />
@@ -328,6 +341,10 @@
             <End Role="Events" EntitySet="Events" />
           </AssociationSet>
           <AssociationSet Name="FK_Events_Organizer" Association="Self.FK_Events_Organizer">
+            <End Role="Organizer" EntitySet="Organizer" />
+            <End Role="Events" EntitySet="Events" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Events_Organizer1" Association="Self.FK_Events_Organizer1">
             <End Role="Organizer" EntitySet="Organizer" />
             <End Role="Events" EntitySet="Events" />
           </AssociationSet>
@@ -446,10 +463,12 @@
           <Property Name="ID_City" Type="Int32" />
           <Property Name="Direction" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="ID_Direction" Type="Int32" />
+          <Property Name="ID_Organizer" Type="Int32" />
           <NavigationProperty Name="Activity" Relationship="Self.FK_Activity_Events" FromRole="Events" ToRole="Activity" />
           <NavigationProperty Name="City" Relationship="Self.FK_Events_City" FromRole="Events" ToRole="City" />
           <NavigationProperty Name="Direction1" Relationship="Self.FK_Events_Direction" FromRole="Events" ToRole="Direction" />
           <NavigationProperty Name="Organizer" Relationship="Self.FK_Events_Organizer" FromRole="Events" ToRole="Organizer" />
+          <NavigationProperty Name="Organizer1" Relationship="Self.FK_Events_Organizer1" FromRole="Events" ToRole="Organizer" />
         </EntityType>
         <EntityType Name="Jury">
           <Key>
@@ -529,6 +548,7 @@
           <NavigationProperty Name="City" Relationship="Self.FK_Organizer_City" FromRole="Organizer" ToRole="City" />
           <NavigationProperty Name="Direction1" Relationship="Self.FK_Organizer_Direction" FromRole="Organizer" ToRole="Direction" />
           <NavigationProperty Name="Events" Relationship="Self.FK_Events_Organizer" FromRole="Organizer" ToRole="Events" />
+          <NavigationProperty Name="Events1" Relationship="Self.FK_Events_Organizer1" FromRole="Organizer" ToRole="Events" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -684,6 +704,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Events_Organizer1">
+          <End Role="Organizer" Type="Self.Organizer" Multiplicity="0..1" />
+          <End Role="Events" Type="Self.Events" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Organizer">
+              <PropertyRef Name="ID_Organizer" />
+            </Principal>
+            <Dependent Role="Events">
+              <PropertyRef Name="ID_Organizer" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="EventEntitiesIT" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Activity" EntityType="Self.Activity" />
           <EntitySet Name="City" EntityType="Self.City" />
@@ -740,6 +772,10 @@
             <End Role="Organizer" EntitySet="Organizer" />
           </AssociationSet>
           <AssociationSet Name="FK_Events_Organizer" Association="Self.FK_Events_Organizer">
+            <End Role="Organizer" EntitySet="Organizer" />
+            <End Role="Events" EntitySet="Events" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Events_Organizer1" Association="Self.FK_Events_Organizer1">
             <End Role="Organizer" EntitySet="Organizer" />
             <End Role="Events" EntitySet="Events" />
           </AssociationSet>
@@ -822,6 +858,7 @@
                 <ScalarProperty Name="ID_City" ColumnName="ID_City" />
                 <ScalarProperty Name="Direction" ColumnName="Direction" />
                 <ScalarProperty Name="ID_Direction" ColumnName="ID_Direction" />
+                <ScalarProperty Name="ID_Organizer" ColumnName="ID_Organizer" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -21,11 +21,13 @@ namespace ITEvents.Entities
         public Nullable<int> ID_City { get; set; }
         public string Direction { get; set; }
         public Nullable<int> ID_Direction { get; set; }
+        public Nullable<int> ID_Organizer { get; set; }
     
         public virtual Activity Activity { get; set; }
         public virtual City City { get; set; }
         public virtual Direction Direction1 { get; set; }
         public virtual Organizer Organizer { get; set; }
+        public virtual Organizer Organizer1 { get; set; }
 
 		public string ImgPathJpg
 		{

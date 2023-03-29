@@ -22,6 +22,9 @@ namespace ITEvents.Pages
 	/// </summary>
 	public partial class Events : Page
 	{
+
+		Organizer organizer1;
+
 		public Events(Organizer organizer)
 		{
 			InitializeComponent();
@@ -36,6 +39,7 @@ namespace ITEvents.Pages
 			UpdateData();
 			if(organizer != null)
 			{
+				organizer1 = organizer;
 				btnCreatEvent.Visibility = Visibility.Visible;
 			}
 		}
@@ -103,5 +107,10 @@ namespace ITEvents.Pages
 
 			NavigationService.Navigate(moreEvent);
 		}
-	}
+
+		private void btnCreatEvent_Click(object sender, RoutedEventArgs e)
+		{
+			NavigationService.Navigate(new pgCreatEvent(organizer1));
+        }
+    }
 }

@@ -123,6 +123,9 @@
     <Compile Include="Pages\OrgPg.xaml.cs">
       <DependentUpon>OrgPg.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\pgCreatEvent.xaml.cs">
+      <DependentUpon>pgCreatEvent.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\pgListJury.xaml.cs">
       <DependentUpon>pgListJury.xaml</DependentUpon>
     </Compile>
@@ -147,6 +150,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\OrgPg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\pgCreatEvent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -261,16 +268,6 @@
     <None Include="Resources\logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Entities\ModelEvent.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelEvent.edmx</DependentUpon>
-      <LastGenOutput>ModelEvent.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Entities\ModelEvent.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelEvent.edmx</DependentUpon>
-      <LastGenOutput>ModelEvent.cs</LastGenOutput>
-    </Content>
     <Resource Include="Resources\Jury\foto1.jpg" />
     <Resource Include="Resources\Jury\foto10.jpg" />
     <Resource Include="Resources\Jury\foto11.jpg" />
@@ -382,6 +379,17 @@
     <Resource Include="Resources\Organizer\8.jpg" />
     <Resource Include="Resources\Organizer\9.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Entities\ModelEvent.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelEvent.edmx</DependentUpon>
+      <LastGenOutput>ModelEvent.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Entities\ModelEvent.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelEvent.edmx</DependentUpon>
+      <LastGenOutput>ModelEvent.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -4,15 +4,15 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="ebf9acfb92114100be8f853bae64adf3" Name="Diagram1">
-        <EntityTypeShape EntityType="ITEventModel.Activity" Width="1.5" PointX="5.25" PointY="24.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ITEventModel.City" Width="1.5" PointX="0.75" PointY="15" IsExpanded="true" />
-        <EntityTypeShape EntityType="ITEventModel.Country" Width="1.5" PointX="3" PointY="13.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="ITEventModel.Direction" Width="1.5" PointX="3.75" PointY="10.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="ITEventModel.Events" Width="1.5" PointX="3" PointY="16.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ITEventModel.Jury" Width="1.5" PointX="6" PointY="14.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="ITEventModel.Members" Width="1.5" PointX="3" PointY="28.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="ITEventModel.Moderators" Width="1.5" PointX="6" PointY="9.25" IsExpanded="true" />
+      <Diagram DiagramId="634eea8258044ae993818fd8234e26c2" Name="Diagram1">
+        <EntityTypeShape EntityType="ITEventModel.Activity" Width="1.5" PointX="5.25" PointY="24.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ITEventModel.City" Width="1.5" PointX="0.75" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ITEventModel.Country" Width="1.5" PointX="3" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ITEventModel.Direction" Width="1.5" PointX="3.75" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ITEventModel.Events" Width="1.5" PointX="3" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ITEventModel.Jury" Width="1.5" PointX="6" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ITEventModel.Members" Width="1.5" PointX="3" PointY="28.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ITEventModel.Moderators" Width="1.5" PointX="6" PointY="9.375" IsExpanded="true" />
         <EntityTypeShape EntityType="ITEventModel.Organizer" Width="1.5" PointX="6" PointY="19.25" IsExpanded="true" />
         <EntityTypeShape EntityType="ITEventModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <AssociationConnector Association="ITEventModel.FK_Activity_Events" ManuallyRouted="false" />
@@ -27,6 +27,7 @@
         <AssociationConnector Association="ITEventModel.FK_Moderators_Direction" ManuallyRouted="false" />
         <AssociationConnector Association="ITEventModel.FK_Organizer_Direction" ManuallyRouted="false" />
         <AssociationConnector Association="ITEventModel.FK_Events_Organizer" ManuallyRouted="false" />
+        <AssociationConnector Association="ITEventModel.FK_Events_Organizer1" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

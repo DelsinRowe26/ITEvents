@@ -18,6 +18,7 @@ namespace ITEvents.Entities
         public Organizer()
         {
             this.Events = new HashSet<Events>();
+            this.Events1 = new HashSet<Events>();
         }
     
         public int ID_Organizer { get; set; }
@@ -38,6 +39,8 @@ namespace ITEvents.Entities
         public virtual Direction Direction1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Events> Events { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Events> Events1 { get; set; }
 
 		public string ImgPathOrgJpg
 		{
