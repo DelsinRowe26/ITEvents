@@ -192,13 +192,10 @@ namespace ITEvents.Pages
 
 		private void cmbTime1_SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
-			if(cmbTime2.SelectedItem != null )
+			if(cmbTime1.SelectedItem != null )
 			{
-				cmbTime1.Items.Remove(cmbTime2.SelectedItem);
-				if (cmbTime3.SelectedItem != null)
-				{
-					cmbTime1.Items.Remove(cmbTime3.SelectedItem);
-				}
+				cmbTime2.Items.Remove(cmbTime1.SelectedItem);
+				cmbTime3.Items.Remove(cmbTime1.SelectedItem);
 			}
 		}
 
