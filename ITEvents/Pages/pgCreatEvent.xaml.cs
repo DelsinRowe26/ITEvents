@@ -46,6 +46,16 @@ namespace ITEvents.Pages
 			"Дизайн"
 		};
 
+		public string[] ListTime { get; set; } =
+		{
+			"9.00",
+			"10.30",
+			"12.00",
+			"13.00",
+			"14.30",
+			"16.00"
+		};
+
 		private void AddTable()
 		{
 			if (tbEventName.Text != "" && tbCity.Text != "" && cmbDirection.Text != "" && cmbJury1.Text != "" && cmbJury2.Text != "" && cmbJury3.Text != "" && cmbTime1.Text != "" && cmbTime2.Text != "" && cmbTime3.Text != "")
@@ -178,6 +188,28 @@ namespace ITEvents.Pages
 			var jury1 = cmbJury1.Text;
 			var jury2 = cmbJury2.Text;
 			var jury3 = cmbJury3.Text;
+		}
+
+		private void cmbTime1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		{
+			if(cmbTime2.SelectedItem != null )
+			{
+				cmbTime1.Items.Remove(cmbTime2.SelectedItem);
+				if (cmbTime3.SelectedItem != null)
+				{
+					cmbTime1.Items.Remove(cmbTime3.SelectedItem);
+				}
+			}
+		}
+
+		private void cmbTime2_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		{
+
+		}
+
+		private void cmbTime3_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		{
+
 		}
 	}
 }
