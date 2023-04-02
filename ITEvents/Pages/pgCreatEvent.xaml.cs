@@ -194,8 +194,24 @@ namespace ITEvents.Pages
 		{
 			if(cmbTime1.SelectedItem != null )
 			{
-				cmbTime2.Items.Remove(cmbTime1.SelectedItem);
-				cmbTime3.Items.Remove(cmbTime1.SelectedItem);
+				var selectedItem = cmbTime1.SelectedItem.ToString();
+				var times = (List<string>)cmbTime2.ItemsSource;
+
+				times.Remove(selectedItem);
+
+				cmbTime2.ItemsSource = null;
+				cmbTime3.ItemsSource = null;
+				cmbTime2.ItemsSource = times;
+				cmbTime3.ItemsSource = times;
+
+				/*if (cmbTime2.Items.Contains(selectedItem))
+				{
+					Dispatcher.Invoke(() => cmbTime2.Items.Remove(selectedItem));
+				}
+				if (cmbTime3.Items.Contains(selectedItem))
+				{
+					Dispatcher.Invoke(() => cmbTime3.Items.Remove(selectedItem));
+				}*/
 			}
 		}
 
