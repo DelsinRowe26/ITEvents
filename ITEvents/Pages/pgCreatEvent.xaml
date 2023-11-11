@@ -70,8 +70,8 @@
             <TextBox Grid.Row="2" Grid.Column="1" x:Name="tbAct2" Width="250" Height="30" HorizontalContentAlignment="Center" Margin="5"/>
             <TextBox Grid.Row="3" Grid.Column="1" x:Name="tbAct3" Width="250" Height="30" HorizontalContentAlignment="Center" Margin="5"/>
             <ComboBox x:Name="cmbTime1" Grid.Column="2" Grid.Row="1" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" ItemsSource="{Binding ListTime}" SelectionChanged="cmbTime1_SelectionChanged"/>
-            <ComboBox x:Name="cmbTime2" Grid.Column="2" Grid.Row="2" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" ItemsSource="{Binding ListTime}" SelectionChanged="cmbTime2_SelectionChanged"/>
-            <ComboBox x:Name="cmbTime3" Grid.Column="2" Grid.Row="3" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" ItemsSource="{Binding ListTime}" SelectionChanged="cmbTime3_SelectionChanged"/>
+            <ComboBox x:Name="cmbTime2" Grid.Column="2" Grid.Row="2" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" ItemsSource="{Binding ListTime}" />
+            <ComboBox x:Name="cmbTime3" Grid.Column="2" Grid.Row="3" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" ItemsSource="{Binding ListTime}" />
             <ComboBox x:Name="cmbJury1" Grid.Column="3" Grid.Row="1" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" ItemsSource="{Binding Jury}" DisplayMemberPath="Fisrtname"/>
             <ComboBox x:Name="cmbJury2" Grid.Column="3" Grid.Row="2" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" ItemsSource="{Binding Jury}" DisplayMemberPath="Fisrtname"/>
             <ComboBox x:Name="cmbJury3" Grid.Column="3" Grid.Row="3" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" ItemsSource="{Binding Jury}" DisplayMemberPath="Fisrtname"/>

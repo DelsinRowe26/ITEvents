@@ -214,15 +214,5 @@ namespace ITEvents.Pages
 				}*/
 			}
 		}
-
-		private void cmbTime2_SelectionChanged(object sender, SelectionChangedEventArgs e)
-		{
-
-		}
-
-		private void cmbTime3_SelectionChanged(object sender, SelectionChangedEventArgs e)
-		{
-
-		}
 	}
 }
